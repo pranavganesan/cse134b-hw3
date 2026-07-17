@@ -1,5 +1,10 @@
 /* https://pranavganesan.github.io/cse134b-hw3/ */
 
+/* 
+   Note: <link> is preferred in production. @import is used here to 
+   satisfy the assignment requirements, but it can cause a 
+   waterfall delay in rendering compared to <link>. 
+*/
 @import url('variables.css');
 
 * {
@@ -7,32 +12,35 @@
     box-sizing: border-box;
 }
 
-/* 1. Use --font-stack (1) and --text-color (1) */
+/* Usage: --font-stack (1), --text-color (1) */
 body {
     font-family: var(--font-stack);
     color: var(--text-color);
     line-height: 1.5;
 }
 
-/* 2. Use --font-stack (2) and --text-color (2) */
-h1 { font-family: var(--font-stack); color: var(--text-color); }
+/* Usage: --font-stack (2), --text-color (2) */
+h1 { 
+    font-family: var(--font-stack); 
+    color: var(--text-color); 
+}
 
+/* Usage: --main-border (1) */
 article {
     max-width: 80%;
     margin: 0 auto;
-    /* 3. Use --border-main (1) */
-    border: var(--border-main);
+    border: var(--main-border);
 }
 
-/* 4. Use --border-main (2) */
+/* Usage: --main-border (2) */
 blockquote {
     padding: 1em;
-    border-left: var(--border-main);
+    border-left: var(--main-border);
 }
 
-/* 5. Use --primary-color (1) */
+/* Usage: --primary-color (1) */
 [type="text"] { border: 1px solid var(--primary-color); }
-/* 6. Use --primary-color (2) */
+/* Usage: --primary-color (2) */
 .latin-term { color: var(--primary-color); }
 
 [lang="la"] { font-style: italic; }

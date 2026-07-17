@@ -1,10 +1,4 @@
 /* https://pranavganesan.github.io/cse134b-hw3/ */
-
-/* 
-   Note: <link> is preferred in production. @import is used here to 
-   satisfy the assignment requirements, but it can cause a 
-   waterfall delay in rendering compared to <link>. 
-*/
 @import url('variables.css');
 
 * {

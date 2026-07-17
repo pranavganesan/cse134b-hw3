@@ -1,0 +1,49 @@
+/* Link: [INSERT YOUR DEPLOYED URL HERE] */
+
+/* Note: <link> is preferred in production to avoid the FOUC 
+   (Flash of Unstyled Content) that can occur with @import. */
+@import url('variables.css');
+
+/* Global reset */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Inherited typography */
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+/* Unit tour */
+article {
+    max-width: 80%;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+blockquote {
+    padding: 1em; /* em context */
+}
+
+/* Attribute, Class, and ID selectors */
+[lang="la"] { font-style: italic; }
+[type="text"] { border: 1px solid var(--primary-color); }
+.latin-term { color: var(--primary-color); }
+#warning-para { border-left: 4px solid red; padding-left: 10px; }
+
+/* Combinators */
+header p { font-weight: bold; }
+article > p { font-size: 1.1rem; }
+dt + dd { margin-bottom: 1rem; }
+
+/* State pseudo-classes */
+button:focus, input:focus { outline: 2px solid var(--primary-color); }
+input:checked + span { font-weight: bold; }
+
+/* Generated content */
+h2::before {
+    content: "🧀 ";
+}

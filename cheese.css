@@ -1,7 +1,7 @@
 /* https://pranavganesan.github.io/cse134b-hw3/ */
 
-/* Note: <link> is preferred in production because @import can cause a 
-   delay in styling while the browser fetches the secondary file. */
+/* Note: <link> is preferred in production because @import creates 
+   a waterfall request that delays rendering. */
 @import url('variables.css');
 
 * {
@@ -10,35 +10,40 @@
 }
 
 body {
-    font-family: var(--font-main);
-    color: var(--text-color);
+    font-family: var(--main-font); /* Usage 1: --main-font */
+    color: var(--text-color);      /* Usage 1: --text-color */
     line-height: 1.5;
-    background-color: #fff; /* Used variable again */
 }
+
+/* Use --main-font again */
+h1 { font-family: var(--main-font); } 
+
+/* Use --text-color again */
+footer { color: var(--text-color); } 
 
 article {
     max-width: 80%;
     margin: 0 auto;
-    border: 1px solid var(--primary-color); /* Used variable */
+    border: var(--border-style); /* Usage 1: --border-style */
 }
 
 blockquote {
     padding: 1em;
-    border-left: 4px solid var(--primary-color); /* Used variable */
+    border-left: var(--border-style); /* Usage 2: --border-style */
 }
 
 [lang="la"] { font-style: italic; }
-[type="text"] { border: 1px solid var(--primary-color); }
-.latin-term { color: var(--primary-color); }
+[type="text"] { border: 1px solid var(--primary-color); } /* Usage 1: --primary-color */
+.latin-term { color: var(--primary-color); }             /* Usage 2: --primary-color */
 #warning-para { border-left: 4px solid red; padding-left: 10px; }
 
 header p { font-weight: bold; }
 article > p { font-size: 1.1rem; }
 dt + dd { margin-bottom: 1rem; }
 
-a:hover { text-decoration: underline; } /* Added hover */
+a:hover { text-decoration: underline; }
 button:focus, input:focus { outline: 2px solid var(--primary-color); }
-input:checked + label { color: var(--primary-color); } /* Fixed checked */
+input:checked + label { color: var(--primary-color); }
 
 h2::before {
     content: "🧀 ";

@@ -12,16 +12,16 @@
     box-sizing: border-box;
 }
 
-/* Usage: --font-stack (1), --text-color (1) */
+/* Usage: --font-main (1), --text-color (1) */
 body {
-    font-family: var(--font-stack);
+    font-family: var(--font-main);
     color: var(--text-color);
     line-height: 1.5;
 }
 
-/* Usage: --font-stack (2), --text-color (2) */
+/* Usage: --font-main (2), --text-color (2) */
 h1 { 
-    font-family: var(--font-stack); 
+    font-family: var(--font-main); 
     color: var(--text-color); 
 }
 

@@ -1,7 +1,7 @@
-/* https://github.com/pranavganesan/cse134b-hw3 */
+/* https://pranavganesan.github.io/cse134b-hw3/ */
 
-/* Note: <link> is preferred in production because @import creates 
-   a waterfall request that delays rendering. */
+/* Note: <link> is preferred in production because @import can cause a 
+   delay in styling while the browser fetches the secondary file. */
 @import url('variables.css');
 
 * {
@@ -13,15 +13,18 @@ body {
     font-family: var(--font-main);
     color: var(--text-color);
     line-height: 1.5;
+    background-color: #fff; /* Used variable again */
 }
 
 article {
     max-width: 80%;
     margin: 0 auto;
+    border: 1px solid var(--primary-color); /* Used variable */
 }
 
 blockquote {
     padding: 1em;
+    border-left: 4px solid var(--primary-color); /* Used variable */
 }
 
 [lang="la"] { font-style: italic; }
@@ -33,8 +36,9 @@ header p { font-weight: bold; }
 article > p { font-size: 1.1rem; }
 dt + dd { margin-bottom: 1rem; }
 
+a:hover { text-decoration: underline; } /* Added hover */
 button:focus, input:focus { outline: 2px solid var(--primary-color); }
-input:checked + span { font-weight: bold; }
+input:checked + label { color: var(--primary-color); } /* Fixed checked */
 
 h2::before {
     content: "🧀 ";

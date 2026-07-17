@@ -1,6 +1,5 @@
 :root {
     --primary-color: #d4a017;
     --text-color: #222;
-    --font-main: 'Segoe UI', Tahoma, sans-serif;
-    --container-padding: 2rem;
+    --font-main: sans-serif;
 }
